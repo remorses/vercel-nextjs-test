@@ -6,7 +6,8 @@ let start = Date.now()
 export default async (req, res) => {
     let functionReady = Date.now()
     const prisma = new PrismaClient()
-    await prisma.$connect()
+    
+    // await prisma.$connect()
     let prismaConnected = Date.now()
     res.status(200).json({
         name: 'John Doe',
